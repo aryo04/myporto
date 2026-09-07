@@ -206,7 +206,7 @@ export const projects: ProjectItem[] = [
     tags: ["Flutter", "Dart", "Supabase", "OpenAI API"],
     image: "/assets/projects/finary.png",
     links: {
-      github: "https://github.com/aryo04"
+      github: "https://github.com/aryo04/Finary"
     }
   },
   {
