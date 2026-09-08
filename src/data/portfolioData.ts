@@ -102,7 +102,7 @@ export const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    title: "Full-Stack & Mobile",
+    title: "Web & Mobile",
     subtitle: "Scalable web apps & cross-platform mobile",
     icon: "dns",
     skills: [
@@ -255,7 +255,7 @@ export const projects: ProjectItem[] = [
     title: "Detexa",
     category: "Computer Vision & AI Detection",
     description: "Deep learning-based facial image classification system using EfficientNetV2-S to distinguish real human faces from StyleGAN-generated synthetic faces.",
-    tags: ["Python", "TensorFlow", "Deep Learning"],
+    tags: ["Python", "TensorFlow", "Streamlit", "Deep Learning"],
     image: "/assets/projects/detexa.png",
     primaryButton: {
       label: "Demo Platform",

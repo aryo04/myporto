@@ -38,7 +38,7 @@ export default function Footer() {
               <span>About</span>
             </a>
             <a className="hover:text-[#865130] transition-colors duration-200 flex items-center gap-1 group" href="#skills">
-              <span>Skills &amp; Tooling</span>
+              <span>Skills &amp; Tools</span>
             </a>
             <a className="hover:text-[#865130] transition-colors duration-200 flex items-center gap-1 group" href="#experience">
               <span>Experience</span>

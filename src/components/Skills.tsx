@@ -58,7 +58,7 @@ export default function Skills() {
             Technical Architecture
           </span>
           <h2 className="font-display text-[32px] md:text-[40px] text-[#050504] font-normal">
-            Skills &amp; Tooling
+            Skills &amp; Tools
           </h2>
           <p className="font-sans text-[15px] text-[#4a4640] mt-2">
             Technologies and frameworks I build with on production pipelines.
