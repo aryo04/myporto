@@ -83,14 +83,6 @@ export default function Contact() {
               );
             })}
           </div>
-
-          {/* Availability & Location Status Indicator */}
-          <div className="mt-7 flex items-center gap-2 text-[12.5px] text-[#7b766f] font-sans flex-wrap justify-center">
-            <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse shrink-0" />
-            <span>Available for opportunities</span>
-            <span className="text-[#ccc6bd]">•</span>
-            <span>Jakarta, Indonesia (WIB)</span>
-          </div>
         </motion.div>
       </div>
     </section>
