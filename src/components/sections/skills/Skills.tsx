@@ -2,8 +2,8 @@
 
 import { motion, type Variants } from "framer-motion";
 import { Brain, Layers, Terminal } from "lucide-react";
-import TechIcon from "@/components/TechIcon";
-import SpotlightCard from "@/components/SpotlightCard";
+import TechIcon from "@/components/ui/TechIcon";
+import SpotlightCard from "@/components/ui/SpotlightCard";
 import { skillCategories } from "@/data/portfolioData";
 
 export default function Skills() {

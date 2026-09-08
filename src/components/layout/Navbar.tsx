@@ -98,7 +98,9 @@ export default function Navbar() {
                 )}
                 <span
                   className={
-                    isActive ? "text-[#865130] font-semibold" : "font-normal"
+                    isActive
+                      ? "text-[#865130] font-semibold transition-colors"
+                      : "transition-colors"
                   }
                 >
                   {link.label}
@@ -108,65 +110,63 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Action Button + Mobile Hamburger */}
+        {/* Right CTA / Connect Button & Mobile Hamburger */}
         <div className="flex items-center gap-3">
-          <motion.a
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
+          <a
             href="#contact"
-            className="hidden sm:inline-flex h-10 px-5 rounded-full bg-[#1f1e1d] text-[#fbf9f6] hover:bg-[#865130] text-[12px] font-semibold tracking-wider uppercase transition-all duration-200 items-center justify-center shadow-sm gap-1.5"
+            className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#1f1e1d] hover:bg-[#865130] text-[#fbf9f6] font-sans text-[12px] uppercase tracking-wider font-semibold transition-all duration-200 shadow-xs group"
           >
-            <span>Get in touch</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </motion.a>
+            <span>Let&apos;s Talk</span>
+            <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
 
-          {/* Mobile Menu Toggle Button */}
+          {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle Navigation Menu"
-            className="md:hidden p-2 rounded-lg text-[#050504] hover:bg-[#efeeeb] transition-colors"
+            className="md:hidden p-2 rounded-full text-[#4a4640] hover:text-[#050504] hover:bg-[#efeeeb] transition-colors"
+            aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-[#050504]" />
-            ) : (
-              <Menu className="w-6 h-6 text-[#050504]" />
-            )}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
-      {/* Animated Mobile Drawer */}
+      {/* Mobile Drawer Navigation */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="overflow-hidden md:hidden border-t border-[#ccc6bd]/60 bg-[#fbf9f6] px-5 py-4 space-y-3"
+            className="md:hidden bg-[#fbf9f6] border-b border-[#ccc6bd] overflow-hidden"
           >
-            {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                onClick={handleLinkClick}
-                className={`block py-2 text-[15px] border-b border-[#ccc6bd]/30 transition-colors ${
-                  activeSection === link.id
-                    ? "text-[#865130] font-semibold pl-2"
-                    : "text-[#4a4640] hover:text-[#050504]"
-                }`}
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              onClick={handleLinkClick}
-              className="flex items-center justify-center gap-1.5 w-full py-2.5 text-center rounded-full bg-[#1f1e1d] text-[#fbf9f6] text-[12px] font-semibold uppercase tracking-wider mt-3 hover:bg-[#865130] transition-colors"
-            >
-              <span>Get in touch</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
+            <div className="px-5 py-4 space-y-1">
+              {navLinks.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className={`block px-4 py-2.5 rounded-xl font-sans text-[15px] transition-colors ${
+                    activeSection === link.id
+                      ? "bg-[#efeeeb] text-[#865130] font-semibold"
+                      : "text-[#4a4640] hover:bg-[#f5f3f0]"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <div className="pt-3">
+                <a
+                  href="#contact"
+                  onClick={handleLinkClick}
+                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-[#1f1e1d] text-[#fbf9f6] font-sans text-[13px] uppercase tracking-wider font-semibold"
+                >
+                  <span>Get In Touch</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

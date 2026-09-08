@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Mail, Sparkles } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/BrandIcons";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function Contact() {
@@ -68,17 +68,12 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={channel.label}
-                  whileHover={{ y: -4, scale: 1.08 }}
-                  whileTap={{ scale: 0.94 }}
-                  className="group relative w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-white border border-[#ccc6bd] text-[#4a4640] hover:text-[#865130] hover:border-[#865130] shadow-[0_2px_10px_-2px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_24px_-4px_rgba(134,81,48,0.22)] flex items-center justify-center transition-all duration-300"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                  className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-white border border-[#ccc6bd] flex items-center justify-center text-[#4a4640] hover:text-[#865130] hover:border-[#865130] shadow-[0_2px_8px_-2px_rgba(110,89,70,0.06)] hover:shadow-[0_8px_20px_-4px_rgba(134,81,48,0.18)] transition-colors cursor-pointer"
                 >
-                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 transition-transform group-hover:scale-110" />
-
-                  {/* Floating Tooltip */}
-                  <span className="absolute -top-10 px-2.5 py-1 rounded-md bg-[#1f1e1d] text-[#fbf9f6] text-[11px] font-sans font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 transition-all duration-200 pointer-events-none shadow-md z-10">
-                    {channel.name}
-                    <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#1f1e1d]" />
-                  </span>
+                  <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </motion.a>
               );
             })}

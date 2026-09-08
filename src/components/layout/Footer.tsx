@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/BrandIcons";
+import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/ui/BrandIcons";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function Footer() {
