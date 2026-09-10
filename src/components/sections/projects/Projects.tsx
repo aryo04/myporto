@@ -1,21 +1,45 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { projects } from "@/data/portfolioData";
 import ProjectItem from "./ProjectItem";
 
 export default function Projects() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(headerRef.current, {
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: "top 85%",
+          toggleActions: "play none none none",
+        },
+        y: 35,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        clearProps: "all",
+      });
+    },
+    { scope: sectionRef }
+  );
+
   return (
     <section
-      className="py-20 md:py-32 max-w-[1200px] mx-auto px-5 md:px-12"
+      ref={sectionRef}
+      className="py-20 md:py-32 max-w-[1200px] mx-auto px-5 md:px-12 overflow-hidden"
       id="projects"
     >
       {/* Section Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+      <div
+        ref={headerRef}
         className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24"
       >
         <div>
@@ -34,9 +58,9 @@ export default function Projects() {
             {projects.length} Projects / 2025–2026
           </span>
         </div>
-      </motion.div>
+      </div>
 
-      {/* 1-by-1 Alternating (Kiri Kanan Kiri Kanan) Project List */}
+      {/* 1-by-1 Alternating (Kiri Kanan) Project List with GSAP 3D ScrollTrigger */}
       <div className="space-y-24 md:space-y-36">
         {projects.map((proj, idx) => (
           <ProjectItem key={proj.id} project={proj} index={idx} />
