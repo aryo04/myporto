@@ -31,7 +31,7 @@ export default function Projects() {
         </div>
         <div className="mt-4 md:mt-0 shrink-0">
           <span className="font-mono text-[13px] text-[#7b766f] bg-[#f5f3f0] px-4 py-2 rounded-full border border-[#ccc6bd]/60 shadow-2xs">
-            {projects.length} Exemplars / 2025–2026
+            {projects.length} Projects / 2025–2026
           </span>
         </div>
       </motion.div>
