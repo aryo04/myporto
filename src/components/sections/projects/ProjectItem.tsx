@@ -106,7 +106,7 @@ export default function ProjectItem({ project, index }: ProjectItemProps) {
           "-=0.3"
         );
 
-      // 2. Subtle Parallax on Image while scrolling through
+      // 2. Subtle Zero-Latency Parallax on Image while scrolling through
       if (img) {
         gsap.fromTo(
           img,
@@ -118,13 +118,16 @@ export default function ProjectItem({ project, index }: ProjectItemProps) {
               trigger: item,
               start: "top bottom",
               end: "bottom top",
-              scrub: 1.2,
+              scrub: 0.35,
             },
           }
         );
       }
 
-      // 3. Interactive 3D Tilt on Hover of the Visual Container
+      // 3. Interactive 3D Tilt on Hover (fine pointer only)
+      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+      if (!isFinePointer) return;
+
       const xTo = gsap.quickTo(visual, "rotationY", {
         duration: 0.45,
         ease: "power2.out",

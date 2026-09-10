@@ -113,6 +113,9 @@ export default function AboutMe() {
         ? gsap.quickTo(glow, "y", { duration: 0.65, ease: "power2.out" })
         : null;
 
+      const isFinePointer = window.matchMedia("(pointer: fine)").matches;
+      if (!isFinePointer) return;
+
       const handleMouseMove = (e: MouseEvent) => {
         const rect = section.getBoundingClientRect();
         const mouseX = (e.clientX - rect.left) / rect.width - 0.5;
