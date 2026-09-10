@@ -79,7 +79,7 @@ export default function Hero() {
 
   return (
     <section
-      className="pt-16 md:pt-28 pb-16 md:pb-24 max-w-[1200px] mx-auto px-5 md:px-12 text-center"
+      className="relative pt-16 md:pt-28 pb-16 md:pb-24 max-w-[1200px] mx-auto px-5 md:px-12 text-center"
       id="hero"
     >
       <div
@@ -89,7 +89,7 @@ export default function Hero() {
         {/* Welcome Badge */}
         <div
           ref={badgeRef}
-          className="inline-flex items-center gap-2 bg-[#f5f3f0] border border-[#ccc6bd]/80 rounded-full px-4 py-1.5 shadow-sm"
+          className="inline-flex items-center gap-2 bg-[#f5f3f0]/90 backdrop-blur-xs border border-[#ccc6bd]/80 rounded-full px-4 py-1.5 shadow-sm"
         >
           <Sparkles className="w-3.5 h-3.5 text-[#865130]" />
           <span className="font-sans text-[12px] text-[#865130] font-semibold tracking-wide">
@@ -141,7 +141,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="hero-cta-btn h-11 px-6 rounded-full bg-white text-[#050504] border border-[#ccc6bd] hover:border-[#865130] hover:text-[#865130] hover:scale-105 active:scale-95 font-sans text-[13px] font-semibold tracking-wide uppercase transition-all duration-200 flex items-center justify-center shadow-xs"
+            className="hero-cta-btn h-11 px-6 rounded-full bg-white/90 backdrop-blur-xs text-[#050504] border border-[#ccc6bd] hover:border-[#865130] hover:text-[#865130] hover:scale-105 active:scale-95 font-sans text-[13px] font-semibold tracking-wide uppercase transition-all duration-200 flex items-center justify-center shadow-xs"
           >
             Contact
           </a>

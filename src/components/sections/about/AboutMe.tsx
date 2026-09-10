@@ -155,15 +155,10 @@ export default function AboutMe() {
   return (
     <section
       ref={sectionRef}
-      className="py-14 md:py-20 bg-white border-y border-[#ccc6bd]/60 overflow-hidden relative"
+      className="py-14 md:py-20 bg-white/75 backdrop-blur-[2px] border-y border-[#ccc6bd]/60 overflow-hidden relative"
       style={{ perspective: "1400px" }}
       id="about"
     >
-      {/* Subtle Ambient Background Gradient Glow */}
-      <div
-        ref={glowRef}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-tr from-[#865130]/10 via-[#f08a46]/8 to-[#3b82f6]/8 rounded-full blur-3xl pointer-events-none -z-10"
-      />
 
       <div className="max-w-[1200px] mx-auto px-5 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">

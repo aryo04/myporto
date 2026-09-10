@@ -1,4 +1,4 @@
-import { Navbar, Footer, SmoothScroll } from "@/components/layout";
+import { Navbar, Footer, SmoothScroll, Global3DBackground } from "@/components/layout";
 import {
   Hero,
   AboutMe,
@@ -11,8 +11,9 @@ import {
 export default function Home() {
   return (
     <SmoothScroll>
+      <Global3DBackground />
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow relative z-10">
         <Hero />
         <AboutMe />
         <Skills />
