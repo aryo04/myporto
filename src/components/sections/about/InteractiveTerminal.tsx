@@ -95,29 +95,29 @@ export default function InteractiveTerminal() {
 
     const runSequence = async () => {
       // 1. Initial Blank Delay (terminal starts completely empty)
-      await wait(600);
+      await wait(800);
       if (isCancelled) return;
 
       for (let i = 0; i < TERMINAL_STEPS.length; i++) {
         const step = TERMINAL_STEPS[i];
 
-        // Type the command letter by letter
+        // Type the command letter by letter at a natural, readable cadence
         for (let charIdx = 1; charIdx <= step.command.length; charIdx++) {
           if (isCancelled) return;
           setCurrentPromptText(step.command.slice(0, charIdx));
-          await wait(38 + Math.random() * 25);
+          await wait(65 + Math.random() * 35);
         }
 
-        // Brief pause after command finishes typing (hitting Enter)
-        await wait(280);
+        // Deliberate pause after command finishes typing (simulating user pressing Enter)
+        await wait(500);
         if (isCancelled) return;
 
         // Reveal the answer/output
         setCompletedSteps((prev) => [...prev, step]);
         setCurrentPromptText("");
 
-        // Pause before typing the next command
-        await wait(750);
+        // Comfortable reading pause before typing the next command
+        await wait(1400);
         if (isCancelled) return;
       }
 
