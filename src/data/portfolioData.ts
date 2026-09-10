@@ -214,10 +214,17 @@ export const projects: ProjectItem[] = [
     title: "CryptoSentinel AI",
     category: "Genesis Program | Teneo Protocol",
     description: "Developed an autonomous AI agent named CryptoSentinel using Go (Golang) to provide real-time crypto market intelligence, including price, sentiment, volatility, and market trend analysis. Integrated multiple CEX, DEX, DeFi, and on-chain APIs to aggregate real-time market data, support cross-exchange analysis and multi-chain portfolio tracking, and enable automated price alerts. Selected as Winner Two among nearly 300 AI agents in the Teneo Genesis Program for developing CryptoSentinel AI, a unified real-time crypto intelligence agent.",
-    tags: ["Go (Golang)", "AI Agent", "On-Chain APIs", "REST APIs"],
+    tags: ["Go (Golang)", "On-Chain APIs", "Railway"],
     image: "/assets/projects/cryptosentinel.png",
     highlightBadge: "Winner 2 • Teneo Genesis Program",
-    links: {}
+    primaryButton: {
+      label: "Live System",
+      url: "https://agent-console.ai/agent-marketplace/cryptosentinel-ai-001"
+    },
+    links: {
+      project: "https://agent-console.ai/agent-marketplace/cryptosentinel-ai-001",
+      github: "https://github.com/aryo04/CryptoSentinel"
+    }
   },
   {
     id: "maintease",
