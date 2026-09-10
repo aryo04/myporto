@@ -199,17 +199,6 @@ export const projects: ProjectItem[] = [
     }
   },
   {
-    id: "finary",
-    title: "Finary",
-    category: "AI Personal Finance & Vault",
-    description: "AI-powered personal finance mobile application where users can log expenses by simply chatting with an AI assistant or scanning receipts, while managing cash, bank accounts, and e-wallets in one place with real-time financial insights and secure data storage.",
-    tags: ["Flutter", "Dart", "Supabase", "OpenAI API"],
-    image: "/assets/projects/finary.png",
-    links: {
-      github: "https://github.com/aryo04/Finary"
-    }
-  },
-  {
     id: "cryptosentinel",
     title: "CryptoSentinel AI",
     category: "Genesis Program | Teneo Protocol",
@@ -224,6 +213,17 @@ export const projects: ProjectItem[] = [
     links: {
       project: "https://agent-console.ai/agent-marketplace/cryptosentinel-ai-001",
       github: "https://github.com/aryo04/CryptoSentinel"
+    }
+  },
+  {
+    id: "finary",
+    title: "Finary",
+    category: "AI Personal Finance & Vault",
+    description: "AI-powered personal finance mobile application where users can log expenses by simply chatting with an AI assistant or scanning receipts, while managing cash, bank accounts, and e-wallets in one place with real-time financial insights and secure data storage.",
+    tags: ["Flutter", "Dart", "Supabase", "OpenAI API"],
+    image: "/assets/projects/finary.png",
+    links: {
+      github: "https://github.com/aryo04/Finary"
     }
   },
   {
