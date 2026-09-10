@@ -179,7 +179,7 @@ export const projects: ProjectItem[] = [
     id: "merapat",
     title: "MERAPAT",
     category: "Enterprise Full-Stack System",
-    description: "Enterprise meeting room management platform for managing room reservations, attendance, executive schedules, and meeting operations.",
+    description: "A web-based meeting management system supporting all organizational units with room booking, scheduling, digital signatures, and attendance tracking, while enabling leaders across each unit to manage their respective agendas.",
     tags: ["React", "Express.js", "PostgreSQL", "Docker", "Nginx", "Linux"],
     image: "/assets/projects/merapat.png",
     primaryButton: {
