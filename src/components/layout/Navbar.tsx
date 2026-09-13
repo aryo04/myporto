@@ -8,7 +8,7 @@ import { personalInfo } from "@/data/portfolioData";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState("");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -20,19 +20,21 @@ export default function Navbar() {
           setScrolled(window.scrollY > 20);
 
           const sections = ["about", "skills", "experience", "projects", "contact"];
-          const scrollPos = window.scrollY + 160;
+          const scrollPos = window.scrollY + 200;
 
+          let current = "";
           for (const sectionId of sections) {
             const el = document.getElementById(sectionId);
             if (el) {
               const top = el.offsetTop;
               const height = el.offsetHeight;
               if (scrollPos >= top && scrollPos < top + height) {
-                setActiveSection(sectionId);
+                current = sectionId;
                 break;
               }
             }
           }
+          setActiveSection(current);
           ticking = false;
         });
         ticking = true;

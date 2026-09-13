@@ -79,12 +79,12 @@ export default function Hero() {
 
   return (
     <section
-      className="relative pt-16 md:pt-28 pb-16 md:pb-24 max-w-[1200px] mx-auto px-5 md:px-12 text-center"
+      className="relative min-h-[calc(100vh-4rem)] min-h-[calc(100dvh-4rem)] flex flex-col justify-center items-center py-12 md:py-16 max-w-[1200px] mx-auto px-5 md:px-12 text-center"
       id="hero"
     >
       <div
         ref={containerRef}
-        className="max-w-3xl mx-auto flex flex-col items-center space-y-6"
+        className="max-w-3xl mx-auto flex flex-col items-center space-y-6 my-auto"
       >
         {/* Welcome Badge */}
         <div

@@ -33,7 +33,37 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     gsap.ticker.add(updateTicker);
     gsap.ticker.lagSmoothing(0);
 
+    // Smooth anchor navigation handling for all # links (navbar, CTAs, logo)
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest("a");
+      if (!target) return;
+      const href = target.getAttribute("href");
+      if (href && href.startsWith("#") && href.length > 1) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        if (targetId === "hero") {
+          lenis.scrollTo(0, {
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          });
+        } else {
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            lenis.scrollTo(targetElement, {
+              offset: -70,
+              duration: 1.2,
+              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            });
+          }
+        }
+        window.history.pushState(null, "", href);
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+
     return () => {
+      document.removeEventListener("click", handleAnchorClick);
       gsap.ticker.remove(updateTicker);
       lenis.destroy();
     };
