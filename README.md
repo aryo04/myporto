@@ -29,7 +29,7 @@ Modern personal portfolio website showcasing AI Engineering and Web Development 
 ### 1. Clone & Install
 ```bash
 git clone https://github.com/aryo04/myporto.git
-cd portofolio-next
+cd myporto
 npm install
 ```
 
