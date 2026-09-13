@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aryo Daffa Khairuddin — Personal Portfolio
 
-## Getting Started
+Modern personal portfolio website showcasing AI Engineering and Web Development projects, built with Next.js, TypeScript, and modern animation libraries.
 
-First, run the development server:
+🌐 **Live Demo:** [https://ardk.vercel.app/](https://ardk.vercel.app/)
 
+---
+
+## 🚀 Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router), React 19, TypeScript
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations & 3D:** Framer Motion, GSAP, Three.js, Lenis (smooth scrolling)
+- **Icons:** Lucide React, React Icons
+
+---
+
+## ⚡ Features
+
+- **Interactive UI & 3D:** Engaging visual experience powered by Three.js and custom canvas animations.
+- **Smooth Navigation:** Fluid scrolling using Lenis and GSAP/Framer Motion transitions.
+- **Showcase Sections:** Hero, About, Skills, Experience, and Interactive Projects with telemetry previews.
+- **Responsive Design:** Optimized for mobile, tablet, and desktop screens.
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone & Install
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/aryo04/portofolioArDk.git
+cd portofolio-next
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Run Development Server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Build for Production
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📬 Contact & Socials
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Live Site:** [ardk.vercel.app](https://ardk.vercel.app/)
+- **GitHub:** [@aryo04](https://github.com/aryo04)
+- **LinkedIn:** [Aryo Daffa Khairuddin](https://www.linkedin.com/in/aryo-daffa-khairuddin/)
+- **Email:** [aryodaffakha48@gmail.com](mailto:aryodaffakha48@gmail.com)
