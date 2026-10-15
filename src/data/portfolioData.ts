@@ -49,7 +49,7 @@ export interface ProjectItem {
     label: string;
     url: string;
   };
-  links: {
+  links?: {
     project?: string;
     github?: string;
   };
@@ -94,9 +94,12 @@ export const skillCategories: SkillCategory[] = [
     icon: "neurology",
     skills: [
       { name: "Python" },
+      { name: "PyTorch" },
       { name: "TensorFlow" },
-      { name: "FastAPI" },
       { name: "Scikit-learn" },
+      { name: "LLM" },
+      { name: "RAG" },
+      { name: "FastAPI" },
       { name: "Pandas" },
       { name: "NumPy" },
     ]
@@ -182,21 +185,6 @@ export const projects: ProjectItem[] = [
     description: "A web-based meeting management system supporting all organizational units with room booking, scheduling, digital signatures, and attendance tracking, while enabling leaders across each unit to manage their respective agendas.",
     tags: ["React", "Express.js", "PostgreSQL", "Docker", "Nginx", "Linux"],
     image: "/assets/projects/merapat.png",
-    primaryButton: {
-      label: "Live System",
-      url: "https://merapat.basarnas.go.id/"
-    },
-    links: {
-      project: "https://merapat.basarnas.go.id/",
-    },
-    telemetry: {
-      type: "room",
-      title: "Room #B-204",
-      badge: "QR Verified",
-      statusTitle: "Collision Status",
-      statusValue: "Anti-Conflict Locked",
-      schedule: "09:00 - 11:30 WIB"
-    }
   },
   {
     id: "cryptosentinel",

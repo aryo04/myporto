@@ -269,7 +269,7 @@ export default function ProjectItem({ project, index }: ProjectItemProps) {
             </a>
           )}
 
-          {project.links.github && (
+          {project.links?.github && (
             <a
               href={project.links.github}
               target="_blank"

@@ -28,7 +28,7 @@ import {
   SiFlutter,
   SiDart,
 } from "react-icons/si";
-import { Globe, Bot, Brain, Sparkles } from "lucide-react";
+import { Globe, Bot, Brain, Sparkles, Database } from "lucide-react";
 
 interface TechIconProps {
   name: string;
@@ -98,8 +98,12 @@ export default function TechIcon({ name, className = "w-4 h-4" }: TechIconProps)
     case "openai api":
     case "openai":
       return <OpenAiIcon className={`${className} text-[#10A37F]`} />;
+    case "llm":
+    case "llms":
     case "ai agent":
       return <Bot className={`${className} text-[#865130]`} />;
+    case "rag":
+      return <Database className={`${className} text-[#865130]`} />;
     case "deep learning":
     case "machine learning":
     case "ml":
