@@ -27,6 +27,7 @@ import {
   SiTailwindcss,
   SiFlutter,
   SiDart,
+  SiRedis,
 } from "react-icons/si";
 import { Globe, Bot, Brain, Sparkles, Database } from "lucide-react";
 
@@ -82,7 +83,14 @@ export default function TechIcon({ name, className = "w-4 h-4" }: TechIconProps)
       return <SiGo className={`${className} text-[#00ADD8]`} />;
     case "postgresql":
     case "postgres":
+    case "pgvector (postgresql)":
+    case "postgresql (pgvector)":
+    case "pgvector":
       return <SiPostgresql className={`${className} text-[#4169E1]`} />;
+    case "redis":
+      return <SiRedis className={`${className} text-[#DC382D]`} />;
+    case "bge-m3":
+      return <Brain className={`${className} text-[#865130]`} />;
     case "docker":
       return <SiDocker className={`${className} text-[#2496ED]`} />;
     case "git / github":

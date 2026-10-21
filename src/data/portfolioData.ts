@@ -215,6 +215,17 @@ export const projects: ProjectItem[] = [
     }
   },
   {
+    id: "paperlens",
+    title: "PaperLens",
+    category: "AI RESEARCH ASSISTANT & MULTIMODAL RAG",
+    description: "A web-based AI research assistant that uses RAG and multimodal AI to analyze academic papers, extract figures and tables, and answer research questions with page-level citations.",
+    tags: ["Next.js", "FastAPI", "pgvector (PostgreSQL)", "Redis", "OpenAI API", "BGE-M3", "Docker"],
+    image: "/assets/projects/paperlens.png",
+    links: {
+      github: "https://github.com/aryo04/PaperLens"
+    }
+  },
+  {
     id: "maintease",
     title: "MaintEase",
     category: "Industrial Predictive AI",
