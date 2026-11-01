@@ -4,7 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ArrowUpRight, Sparkles, FileText } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function Hero() {
@@ -16,8 +16,6 @@ export default function Hero() {
   const bioRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const btnProjectsRef = useRef<HTMLAnchorElement>(null);
-  const btnResumeRef = useRef<HTMLAnchorElement>(null);
-  const btnContactRef = useRef<HTMLAnchorElement>(null);
 
   // Split headline text into words for cinematic mask reveal
   const headlineWords = `Hi, I'm ${personalInfo.name}`.split(" ");
@@ -78,12 +76,11 @@ export default function Hero() {
         )
         // CTAs with bounce pop
         .from(
-          [btnProjectsRef.current, btnResumeRef.current, btnContactRef.current],
+          btnProjectsRef.current,
           {
             y: 18,
             opacity: 0,
             scale: 0.92,
-            stagger: 0.08,
             duration: 0.65,
             ease: "back.out(1.5)",
             clearProps: "opacity,scale",
@@ -189,15 +186,11 @@ export default function Hero() {
         };
 
         const cleanupProjects = setupMagnetic(btnProjectsRef.current);
-        const cleanupResume = setupMagnetic(btnResumeRef.current);
-        const cleanupContact = setupMagnetic(btnContactRef.current);
 
         return () => {
           section.removeEventListener("mousemove", handleMouseMove);
           section.removeEventListener("mouseleave", handleMouseLeave);
           cleanupProjects();
-          cleanupResume();
-          cleanupContact();
         };
       }
     },
@@ -280,23 +273,6 @@ export default function Hero() {
           >
             <span>View Projects</span>
             <ArrowUpRight className="w-4 h-4" />
-          </a>
-          <a
-            ref={btnResumeRef}
-            href={personalInfo.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hero-cta-btn h-11 px-5 rounded-full bg-white/90 backdrop-blur-xs text-[#050504] border border-[#ccc6bd] hover:border-[#865130] hover:text-[#865130] font-sans text-[13px] font-semibold tracking-wide uppercase transition-colors duration-200 flex items-center justify-center shadow-xs gap-2 transform-gpu will-change-transform group"
-          >
-            <FileText className="w-3.5 h-3.5 text-[#865130]" />
-            <span>Resume / CV</span>
-          </a>
-          <a
-            ref={btnContactRef}
-            href="#contact"
-            className="hero-cta-btn h-11 px-5 rounded-full bg-transparent hover:bg-[#efeeeb] text-[#4a4640] hover:text-[#050504] font-sans text-[13px] font-semibold tracking-wide uppercase transition-colors duration-200 flex items-center justify-center transform-gpu will-change-transform"
-          >
-            Contact
           </a>
         </div>
       </div>

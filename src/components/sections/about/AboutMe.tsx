@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { UserCheck, FileText, ArrowUpRight } from "lucide-react";
+import { UserCheck } from "lucide-react";
 import SpotlightCard from "@/components/ui/SpotlightCard";
 import { personalInfo } from "@/data/portfolioData";
 import InteractiveTerminal from "./InteractiveTerminal";
@@ -199,22 +199,6 @@ export default function AboutMe() {
               <p className="about-story-p font-sans text-[14px] md:text-[15px] text-[#7b766f] leading-relaxed border-t border-[#ccc6bd]/40 pt-4">
                 Focused on building practical AI and web solutions, from developing machine learning models and integrating LLMs to deploying functional applications for real-world use cases.
               </p>
-
-              <div className="about-story-p pt-4 flex flex-wrap items-center justify-between gap-3">
-                <a
-                  href={personalInfo.resumeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1f1e1d] hover:bg-[#865130] text-[#fbf9f6] text-[13px] font-sans font-medium tracking-wide transition-all duration-200 shadow-xs group"
-                >
-                  <FileText className="w-4 h-4 text-[#d4cfc7] group-hover:text-white transition-colors" />
-                  <span>Curriculum Vitae</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </a>
-                <span className="text-[12px] text-[#7b766f] font-mono">
-                  PDF • Aryo Daffa Khairuddin
-                </span>
-              </div>
             </SpotlightCard>
           </div>
 
