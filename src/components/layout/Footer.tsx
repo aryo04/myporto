@@ -4,7 +4,7 @@ import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight, Mail, FileText } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
 import { personalInfo } from "@/data/portfolioData";
 
@@ -173,6 +173,19 @@ export default function Footer() {
               >
                 <LinkedinIcon className="w-3.5 h-3.5 text-[#865130]" />
                 <span>LinkedIn</span>
+                <ArrowUpRight className="w-3 h-3 text-[#7b766f] group-hover:text-[#865130] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            </MagneticItem>
+
+            <MagneticItem>
+              <a
+                className="hover:text-[#865130] transition-colors duration-200 flex items-center gap-1.5 group py-0.5"
+                href={personalInfo.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText className="w-3.5 h-3.5 text-[#865130]" />
+                <span>Resume / CV</span>
                 <ArrowUpRight className="w-3 h-3 text-[#7b766f] group-hover:text-[#865130] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </MagneticItem>

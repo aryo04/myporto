@@ -8,6 +8,7 @@ export interface PersonalInfo {
   focusAreas?: string;
   aboutStory: string;
   email: string;
+  resumeUrl?: string;
   socialLinks: {
     name: string;
     url: string;
@@ -80,6 +81,7 @@ export const personalInfo: PersonalInfo = {
   education: "Informatics Graduate • Gunadarma University",
   aboutStory: "Fresh Graduate in Informatics from Gunadarma University with a focus on AI Engineering and Web Development. Experienced in developing AI-powered web applications, integrating machine learning and deep learning models, and implementing practical LLM-based solutions with enterprise reliability.",
   email: "aryodaffakha48@gmail.com",
+  resumeUrl: "/assets/projects/CV_Aryo%20Daffa%20Khairuddin.pdf",
   socialLinks: [
     { name: "LinkedIn", url: "https://www.linkedin.com/in/aryo-daffa-khairuddin/", icon: "linkedin" },
     { name: "GitHub", url: "https://github.com/aryo04", icon: "github" },

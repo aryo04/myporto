@@ -70,6 +70,26 @@ const TERMINAL_STEPS: TerminalStep[] = [
       </div>
     ),
   },
+  {
+    command: "open cv.pdf",
+    output: (
+      <div className="space-y-1 text-[#d4cfc7] text-[12.5px]">
+        <div className="text-[#38bdf8] font-mono text-[12px]">
+          [OK] Document located: Aryo Daffa Khairuddin - CV
+        </div>
+        <div className="pt-0.5">
+          <a
+            href="/assets/projects/CV_Aryo%20Daffa%20Khairuddin.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-[#fb923c] hover:text-[#fed7aa] underline underline-offset-4 font-medium transition-colors"
+          >
+            <span>&gt; Click to view / download CV.pdf</span>
+          </a>
+        </div>
+      </div>
+    ),
+  },
 ];
 
 export default function InteractiveTerminal() {

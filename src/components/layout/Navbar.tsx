@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, FileText } from "lucide-react";
 import { personalInfo } from "@/data/portfolioData";
 
 export default function Navbar() {
@@ -113,7 +113,17 @@ export default function Navbar() {
         </nav>
 
         {/* Right CTA / Connect Button & Mobile Hamburger */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5 sm:gap-3">
+          <a
+            href={personalInfo.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#ccc6bd] hover:border-[#865130] bg-white/70 hover:bg-white text-[#4a4640] hover:text-[#865130] font-sans text-[12px] font-medium transition-all duration-200"
+          >
+            <FileText className="w-3.5 h-3.5 text-[#865130]" />
+            <span>CV</span>
+          </a>
+
           <a
             href="#contact"
             className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#1f1e1d] hover:bg-[#865130] text-[#fbf9f6] font-sans text-[12px] uppercase tracking-wider font-semibold transition-all duration-200 shadow-xs group"
@@ -158,7 +168,17 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <div className="pt-3">
+              <div className="pt-3 space-y-2">
+                <a
+                  href={personalInfo.resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleLinkClick}
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-[#ccc6bd] bg-white text-[#1f1e1d] hover:border-[#865130] hover:text-[#865130] font-sans text-[13px] font-medium transition-colors"
+                >
+                  <FileText className="w-4 h-4 text-[#865130]" />
+                  <span>Curriculum Vitae (PDF)</span>
+                </a>
                 <a
                   href="#contact"
                   onClick={handleLinkClick}
